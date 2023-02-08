@@ -6,4 +6,4 @@ Currently the notebook outlines how to create several variations of stimulus exh
 - Alternating silence Zwicker tone.
 - The binaural Zwicker tone.
 
-A [web app](https://github.com/JKilgallen/zwicker_tone) is also implemented which allows for real time generation of stimuli.
+A [web app](https://jkilgallen-zwicker-tone.streamlit.app/) is also implemented which allows for real time generation of stimuli.
