@@ -37,32 +37,32 @@ if effect_type == "Binaural":
                                          slider_ranges[i][1]) 
                                          for i in range(n_channels)])
     
-    fig, ax = plt.subplots(2, 2)
-    fig.set_figheight(10)
-    fig.set_figwidth(20)
+    # fig, ax = plt.subplots(2, 2)
+    # fig.set_figheight(10)
+    # fig.set_figwidth(20)
 
-    time = np.arange(0, T, 1/sampling_frequency)
+    # time = np.arange(0, T, 1/sampling_frequency)
 
-    ax[0][0].plot(time, signal[0])
-    ax[0][0].set_title("Channel 1 Audioform")
-    ax[0][0].set_ylabel("Amplitude")
-    ax[0][0].set_xlabel("Time (s)")
+    # ax[0][0].plot(time, signal[0])
+    # ax[0][0].set_title("Channel 1 Audioform")
+    # ax[0][0].set_ylabel("Amplitude")
+    # ax[0][0].set_xlabel("Time (s)")
 
-    ax[0][1].plot(time, signal[1])
-    ax[0][1].set_title("Channel 2 Audioform")
-    ax[0][1].set_ylabel("Amplitude")
-    ax[0][1].set_xlabel("Time (s)")
+    # ax[0][1].plot(time, signal[1])
+    # ax[0][1].set_title("Channel 2 Audioform")
+    # ax[0][1].set_ylabel("Amplitude")
+    # ax[0][1].set_xlabel("Time (s)")
 
-    ax[1][0].specgram(signal[0], Fs = sampling_frequency)
-    ax[1][0].set_title("Channel 1 Spectrograph")
-    ax[1][0].set_ylabel("Frequency (Hz)")
-    ax[1][0].set_xlabel("Time (s)")
+    # ax[1][0].specgram(signal[0], Fs = sampling_frequency)
+    # ax[1][0].set_title("Channel 1 Spectrograph")
+    # ax[1][0].set_ylabel("Frequency (Hz)")
+    # ax[1][0].set_xlabel("Time (s)")
     
-    ax[1][1].specgram(signal[1], Fs = sampling_frequency)
-    ax[1][1].set_title("Channel 2 Spectrograph")
-    ax[1][1].set_ylabel("Frequency (Hz)")
-    ax[1][1].set_xlabel("Time (s)")
-    st.pyplot(fig)
+    # ax[1][1].specgram(signal[1], Fs = sampling_frequency)
+    # ax[1][1].set_title("Channel 2 Spectrograph")
+    # ax[1][1].set_ylabel("Frequency (Hz)")
+    # ax[1][1].set_xlabel("Time (s)")
+    # st.pyplot(fig)
 else:
     n_channels = 1
     slider_range = st.slider(f"Band-stop Filter (Hz)", 
@@ -86,21 +86,21 @@ else:
             signal[noise_samples*i+silence_samples*i:noise_samples*i + silence_samples*(i+1)] = 0
             i+= 1
 
-        fig, ax = plt.subplots(2, 1)
-        fig.set_figheight(10)
-        fig.set_figwidth(20)
+        # fig, ax = plt.subplots(2, 1)
+        # fig.set_figheight(10)
+        # fig.set_figwidth(20)
 
-        time = np.arange(0, T, 1/sampling_frequency)
-        ax[0].plot(time, signal)
-        ax[0].set_title("Audioform")
-        ax[0].set_ylabel("Amplitude")
-        ax[0].set_xlabel("Time (s)")
+        # time = np.arange(0, T, 1/sampling_frequency)
+        # ax[0].plot(time, signal)
+        # ax[0].set_title("Audioform")
+        # ax[0].set_ylabel("Amplitude")
+        # ax[0].set_xlabel("Time (s)")
 
-        ax[1].specgram(signal, Fs = sampling_frequency)
-        ax[1].set_title("Spectrograph")
-        ax[1].set_ylabel("Frequency (Hz)")
-        ax[1].set_xlabel("Time (s)")
-        st.pyplot(fig)
+        # ax[1].specgram(signal, Fs = sampling_frequency)
+        # ax[1].set_title("Spectrograph")
+        # ax[1].set_ylabel("Frequency (Hz)")
+        # ax[1].set_xlabel("Time (s)")
+        # st.pyplot(fig)
 
     elif effect_type == "Monaural":
 
@@ -109,21 +109,21 @@ else:
                                             slider_range[0], 
                                             slider_range[1])
 
-        fig, ax = plt.subplots(2, 1)
-        fig.set_figheight(10)
-        fig.set_figwidth(20)
+        # fig, ax = plt.subplots(2, 1)
+        # fig.set_figheight(10)
+        # fig.set_figwidth(20)
 
-        time = np.arange(0, T, 1/sampling_frequency)
-        ax[0].plot(time, signal)
-        ax[0].set_title("Audioform")
-        ax[0].set_ylabel("Amplitude")
-        ax[0].set_xlabel("Time (s)")
+        # time = np.arange(0, T, 1/sampling_frequency)
+        # ax[0].plot(time, signal)
+        # ax[0].set_title("Audioform")
+        # ax[0].set_ylabel("Amplitude")
+        # ax[0].set_xlabel("Time (s)")
 
-        ax[1].specgram(signal, Fs = sampling_frequency)
-        ax[1].set_title("Spectrograph")
-        ax[1].set_ylabel("Frequency (Hz)")
-        ax[1].set_xlabel("Time (s)")
-        st.pyplot(fig)
+        # ax[1].specgram(signal, Fs = sampling_frequency)
+        # ax[1].set_title("Spectrograph")
+        # ax[1].set_ylabel("Frequency (Hz)")
+        # ax[1].set_xlabel("Time (s)")
+        # st.pyplot(fig)
 
 
 
